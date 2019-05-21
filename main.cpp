@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "functions.h"
+#include "optMethods.h"
 
 int main() {
     double x = 1;
