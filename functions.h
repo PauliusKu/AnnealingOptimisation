@@ -5,7 +5,9 @@
 #ifndef ANNEALINGOPTIMISATION_FUNCTIONS_H
 #define ANNEALINGOPTIMISATION_FUNCTIONS_H
 
-double funcBooth(double[]);
+#include <vector>
+
+double funcBooth(std::vector<double>&);
 
 #endif //ANNEALINGOPTIMISATION_FUNCTIONS_H
 

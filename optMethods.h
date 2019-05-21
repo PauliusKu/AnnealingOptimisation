@@ -8,9 +8,12 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <cmath>
 
-void annealingMeth(double (*)(double[]), double (*)(double&, double&),
-                   unsigned int&, unsigned int&, const std::vector<double>&,
+#include "randomNum.h"
+
+void annealingMeth(double (*)(std::vector<double>&), double (*)(double&, double&),
+                   unsigned int&, unsigned int&, std::vector<double>&,
                    double&, double&);
 
 #endif //ANNEALINGOPTIMISATION_OPTMETHODS_H

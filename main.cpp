@@ -8,7 +8,6 @@
 
 #include "functions.h"
 #include "optMethods.h"
-#include "randomNum.h"
 
 
 int main() {
@@ -16,8 +15,8 @@ int main() {
 
     double min = -10;
     double max = 10;
-    unsigned int temperature = 500;
-    unsigned int itterations = 100;
+    unsigned int temperature = 100000;
+    unsigned int itterations = 100000;
 
     annealingMeth(funcBooth, randomNum, temperature, itterations, X, min, max);
 

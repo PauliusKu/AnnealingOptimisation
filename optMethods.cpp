@@ -8,19 +8,23 @@ void genNewNeighbour(double (*)(double&, double&), std::vector<double>&, double&
 
 // Main
 
-void annealingMeth(double (*funcOpt)(double[]), double (*funcRand)(double&, double&),
-                   unsigned int &temp, unsigned int &itr, const std::vector<double> &X,
+void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(double&, double&),
+                   unsigned int &temp, unsigned int &itr, std::vector<double> &X,
                    double &min, double &max){
-
     std::vector<double> Xnew;
     Xnew.resize(X.size());
 
     for(unsigned int i = 0; i < itr; i++){
         /* Generate new neighbour */
         genNewNeighbour(funcRand, Xnew, min, max);
-        std::cout << Xnew[0] << " --- " << Xnew[1] << std::endl;
 
+        /* Calculate delta energy */
+        if(pow(	M_E, (funcOpt(Xnew) - funcOpt(X)) / temp) < randomNum()){
+            X.swap(Xnew);
+            temp--;
+        }
     }
+    std::cout << X[0] << " " << X[1] << std::endl;
 
 }
 
