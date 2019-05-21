@@ -4,15 +4,22 @@
 
 
 #include <iostream>
+#include <vector>
 
 #include "functions.h"
 #include "optMethods.h"
+#include "randomNum.h"
+
 
 int main() {
-    double x = 1;
-    double y = 3;
+    std::vector<double> X{1, 2};
 
-    std::cout << funcBooth(x, y) << std::endl;
+    double min = -10;
+    double max = 10;
+    unsigned int temperature = 500;
+    unsigned int itterations = 100;
+
+    annealingMeth(funcBooth, randomNum, temperature, itterations, X, min, max);
 
     return 0;
 }

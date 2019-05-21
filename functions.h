@@ -5,6 +5,7 @@
 #ifndef ANNEALINGOPTIMISATION_FUNCTIONS_H
 #define ANNEALINGOPTIMISATION_FUNCTIONS_H
 
+double funcBooth(double[]);
+
 #endif //ANNEALINGOPTIMISATION_FUNCTIONS_H
 
-double funcBooth(double, double);

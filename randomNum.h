@@ -5,6 +5,6 @@
 #ifndef ANNEALINGOPTIMISATION_RANDOMNUM_H
 #define ANNEALINGOPTIMISATION_RANDOMNUM_H
 
-double randomNum(double, double);
+double randomNum(double&, double&);
 
 #endif //ANNEALINGOPTIMISATION_RANDOMNUM_H

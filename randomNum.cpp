@@ -20,7 +20,7 @@ std::mt19937 randomly_seeded_engine() {
     return std::mt19937(seed_seq) ; // note: the seed sequence provides a warm up sequence for the rng
 }
 
-double randomNum( double a, double b ) {
+double randomNum( double &a, double &b ) {
 
     static auto rng = randomly_seeded_engine() ;
     static std::uniform_real_distribution<double> distribution ;
