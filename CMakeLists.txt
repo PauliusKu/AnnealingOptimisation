@@ -3,4 +3,4 @@ project(AnnealingOptimisation)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(AnnealingOptimisation main.cpp)
+add_executable(AnnealingOptimisation main.cpp functions.h)

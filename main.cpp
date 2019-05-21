@@ -1,14 +1,12 @@
 #include <iostream>
 
-double func(double x, double y){
-    return -((x * y - x * x * y - x * y * y) / 8);
-}
+#include "functions.h"
 
 int main() {
-    double x = 0;
-    double y = 0;
+    double x = 1;
+    double y = 3;
 
-    std::cout << func(x, y) << std::endl;
+    std::cout << funcBooth(x, y) << std::endl;
 
     return 0;
 }
