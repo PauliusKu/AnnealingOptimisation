@@ -13,12 +13,12 @@
 int main() {
     std::vector<double> X{1, 2};
 
-    double min = -10;
-    double max = 10;
+    double min = -2;
+    double max = 2;
     unsigned int temperature = 100000;
     unsigned int itterations = 100000;
 
-    annealingMeth(funcBooth, randomNum, temperature, itterations, X, min, max);
+    annealingMeth(funcGoldsteinAndPrice, randomNum, temperature, itterations, X, min, max);
 
     return 0;
 }
