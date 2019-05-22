@@ -3,6 +3,7 @@
 //
 
 #include "optMethods.h"
+#include "randomNum.h"
 
 void genNewNeighbour(double (*)(double&, double&), std::vector<double>&, double&, double&);
 
@@ -21,8 +22,8 @@ void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(d
         /* Calculate delta energy */
         if(pow(	M_E, (funcOpt(Xnew) - funcOpt(X)) / temp) < randomNum()){
             X.swap(Xnew);
-            temp--;
         }
+        temp--;
     }
     std::cout << X[0] << " " << X[1] << std::endl;
 
@@ -30,8 +31,7 @@ void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(d
 
 // End Main
 
-// Inner functions
-
+// Local functions
 
 void genNewNeighbour(double (*funcRand)(double&, double&), std::vector<double> &X, double &min, double &max) {
     for(auto& value: X){
@@ -39,4 +39,4 @@ void genNewNeighbour(double (*funcRand)(double&, double&), std::vector<double> &
     }
 }
 
-// End inner functions
+// End Local functions

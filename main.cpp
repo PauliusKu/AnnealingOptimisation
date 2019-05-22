@@ -2,13 +2,14 @@
 // Created by Paulius on 2019-05-21.
 //
 
-
 #include <iostream>
 #include <vector>
 
 #include "functions.h"
 #include "optMethods.h"
+#include "randomNum.h"
 
+// Main
 
 int main() {
     std::vector<double> X{1, 2};
@@ -22,3 +23,9 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+// End Main
