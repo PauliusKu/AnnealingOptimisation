@@ -8,6 +8,7 @@
 #include "functions.h"
 #include "optMethods.h"
 #include "randomNum.h"
+#include "tempMethods.h"
 
 // Main
 
@@ -16,10 +17,11 @@ int main() {
 
     double min = -10;
     double max = 10;
-    double temperature = 100000;
-    unsigned int itterations = 100000;
+    double temperature = 1;
+    double tempDecrVal = 0.99999;
+    unsigned int itterations = 1000000;
 
-    annealingMeth(funcBooth, randomNum, temperature, itterations, X, min, max);
+    annealingMeth(funcBooth, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
 
     return 0;
 }

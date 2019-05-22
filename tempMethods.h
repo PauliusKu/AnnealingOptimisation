@@ -1,0 +1,10 @@
+//
+// Created by Paulius on 2019-05-22.
+//
+
+#ifndef ANNEALINGOPTIMISATION_TEMPMETHODS_H
+#define ANNEALINGOPTIMISATION_TEMPMETHODS_H
+
+double getNextMltDescT(double, double);
+
+#endif //ANNEALINGOPTIMISATION_TEMPMETHODS_H

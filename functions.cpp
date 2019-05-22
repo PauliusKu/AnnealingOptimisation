@@ -1,16 +1,22 @@
 //
 // Created by Paulius on 2019-05-21.
+// Functions taken from http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO_files/Page2213.htm
 //
 
 #include <cmath>
 #include "functions.h"
 
+
+/* Number of variables: n = 2.
+ * Search domain: −10 ≤ xi ≤ 10, i = 1, 2.
+ * Number of local minima: several local minima.
+ * The global minimum: x* =  (1, 3), f(x*) = 0 */
 double funcBooth(std::vector<double> &X){
     return pow(X[0] + 2 * X[1] - 7, 2) + pow(2 * X[0] + X[1] - 5, 2);
 }
 
 double funcMatyas(std::vector<double> &X){
-    return 0.20*(pow(X[0],2)+pow(X[1],2)) - 0.48*X[0]*X[1];
+    return 0.26*(pow(X[0],2)+pow(X[1],2)) - 0.48*X[0]*X[1];
 }
 
 double funcGoldsteinAndPrice(std::vector<double>&X){
