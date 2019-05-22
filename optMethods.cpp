@@ -30,7 +30,8 @@ void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(d
 
         temp = funcTemp(temp, tempDecr);
     }
-    std::cout << X[0] << " " << X[1] << " " << std::endl;
+    for(auto& j:X)
+        std::cout << j << std::endl;
 }
 
 // End Main

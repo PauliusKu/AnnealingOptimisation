@@ -8,6 +8,7 @@
 #include <vector>
 
 double funcBooth(std::vector<double>&);
+double funcRastrigin(std::vector<double>&);
 double funcMatyas(std::vector<double>&);
 double funcGoldsteinAndPrice(std::vector<double>&);
 double funcEasom(std::vector<double>&);

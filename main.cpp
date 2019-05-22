@@ -13,15 +13,15 @@
 // Main
 
 int main() {
-    std::vector<double> X{1, 2};
+    std::vector<double> X{1, 2, 3, 4};
 
-    double min = -10;
-    double max = 10;
+    double min = -5.12;
+    double max = 5.12;
     double temperature = 1;
-    double tempDecrVal = 0.99999;
-    unsigned int itterations = 1000000;
+    double tempDecrVal = 0.999999;
+    unsigned int itterations = 10000000;
 
-    annealingMeth(funcBooth, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
+    annealingMeth(funcRastrigin, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
 
     return 0;
 }

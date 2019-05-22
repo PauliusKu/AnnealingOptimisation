@@ -15,6 +15,18 @@ double funcBooth(std::vector<double> &X){
     return pow(X[0] + 2 * X[1] - 7, 2) + pow(2 * X[0] + X[1] - 5, 2);
 }
 
+/* Number of variables: n variables.
+ * Search domain: −5.12 ≤ xi ≤ 5.12, i = 1, 2, . . . , n.
+ * Number of local minima: several local minima.
+ * The global minima: x* =  (0, …, 0), f(x*) = 0. */
+double funcRastrigin(std::vector<double>&X){
+    double s = 0;
+    for(auto& j: X) {
+        s = s+(pow(j,2)-10*cos(2*M_PI*j));
+    }
+    return 10*X.size()+s;
+}
+
 double funcMatyas(std::vector<double> &X){
     return 0.26*(pow(X[0],2)+pow(X[1],2)) - 0.48*X[0]*X[1];
 }
