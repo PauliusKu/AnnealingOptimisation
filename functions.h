@@ -13,6 +13,12 @@ double funcMatyas(std::vector<double>&);
 double funcGoldsteinAndPrice(std::vector<double>&);
 double funcEasom(std::vector<double>&);
 double funcBeale(std::vector<double>&);
-
+double funcBranin(std::vector<double>&);
+double funcHump(std::vector<double>&);
+double funcZakharov(std::vector<double>&);
+double funcTrid(std::vector<double>&);
+double funcSumSquares(std::vector<double>&);
+double funcSphere(std::vector<double>&);
+double funcShubert(std::vector<double>&);
 #endif //ANNEALINGOPTIMISATION_FUNCTIONS_H
 
