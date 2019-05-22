@@ -3,14 +3,19 @@
 //
 
 #include "optMethods.h"
+#include "randomNum.h"
+#include "tempMethods.h"
+
 
 void genNewNeighbour(double (*)(double&, double&), std::vector<double>&, double&, double&);
 
 // Main
 
 void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(double&, double&),
-                   unsigned int &temp, unsigned int &itr, std::vector<double> &X,
-                   double &min, double &max){
+                   double (*funcTemp)(double, double),
+                   double &temp, unsigned int &itr, std::vector<double> &X,
+                   double &min, double &max, double &tempDecr){
+    double aProb;
     std::vector<double> Xnew;
     Xnew.resize(X.size());
 
@@ -19,19 +24,18 @@ void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(d
         genNewNeighbour(funcRand, Xnew, min, max);
 
         /* Calculate delta energy */
-        if(pow(	M_E, (funcOpt(Xnew) - funcOpt(X)) / temp) < randomNum()){
+        aProb = pow(M_E, (funcOpt(X) - funcOpt(Xnew)) / temp);
+        if(aProb > randomNum())
             X.swap(Xnew);
-            temp--;
-        }
-    }
-    std::cout << X[0] << " " << X[1] << std::endl;
 
+        temp = funcTemp(temp, tempDecr);
+    }
+    std::cout << X[0] << " " << X[1] << " " << std::endl;
 }
 
 // End Main
 
-// Inner functions
-
+// Local functions
 
 void genNewNeighbour(double (*funcRand)(double&, double&), std::vector<double> &X, double &min, double &max) {
     for(auto& value: X){
@@ -39,4 +43,4 @@ void genNewNeighbour(double (*funcRand)(double&, double&), std::vector<double> &
     }
 }
 
-// End inner functions
+// End Local functions

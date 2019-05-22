@@ -28,12 +28,21 @@ double randomNum(double &a, double &b){
     return distribution(rng);
 }
 
-double randomNum(){
+int randomNum(int a, int b){
 
     static auto rng = randomly_seeded_engine();
     static std::uniform_int_distribution<int> distribution;
 
-    distribution.param( std::uniform_int_distribution<int>::param_type{0, 1});
+    distribution.param( std::uniform_int_distribution<int>::param_type{a, b});
+    return distribution(rng);
+}
+
+double randomNum(){
+
+    static auto rng = randomly_seeded_engine();
+    static std::uniform_real_distribution<double> distribution;
+
+    distribution.param( std::uniform_real_distribution<double>::param_type{0, 1});
     return distribution(rng);
 }
 

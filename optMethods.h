@@ -10,10 +10,8 @@
 #include <iostream>
 #include <cmath>
 
-#include "randomNum.h"
-
-void annealingMeth(double (*)(std::vector<double>&), double (*)(double&, double&),
-                   unsigned int&, unsigned int&, std::vector<double>&,
-                   double&, double&);
+void annealingMeth(double (*)(std::vector<double>&), double (*)(double&, double&), double (*)(double, double),
+                   double&, unsigned int&, std::vector<double>&,
+                   double&, double&, double&);
 
 #endif //ANNEALINGOPTIMISATION_OPTMETHODS_H
