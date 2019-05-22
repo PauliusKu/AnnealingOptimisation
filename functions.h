@@ -8,6 +8,9 @@
 #include <vector>
 
 double funcBooth(std::vector<double>&);
+double funcMatyas(std::vector<double>&);
+double funcGoldsteinAndPrice(std::vector<double>&);
+double funcEasom(std::vector<double>&);
 
 #endif //ANNEALINGOPTIMISATION_FUNCTIONS_H
 
