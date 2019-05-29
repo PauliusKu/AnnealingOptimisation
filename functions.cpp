@@ -37,7 +37,7 @@ double funcGoldsteinAndPrice(std::vector<double>&X){
 }
 
 double funcEasom(std::vector<double>&X){
-    return -1*std::cos(X[0])*std::cos(X[1])*M_E*(-pow(X[0]- M_PI,2)-pow(X[1]-M_PI,2));
+    return -1*std::cos(X[1])*std::cos(X[1])*pow(M_E,-1*pow(X[0]-M_PI, 2)- pow(X[1]-M_PI, 2));
 }
 
 double funcBeale(std::vector<double>&X){

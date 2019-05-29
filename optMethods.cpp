@@ -12,8 +12,7 @@ void genNewNeighbour(double (*)(double&, double&), std::vector<double>&, double&
 // Main
 
 void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(double&, double&),
-                   double (*funcTemp)(double, double),
-                   double &temp, unsigned int &itr, std::vector<double> &X,
+                   double (*funcTemp)(double, double), double &temp, unsigned int &itr, std::vector<double> &X,
                    double &min, double &max, double &tempDecr){
     double aProb;
     std::vector<double> Xnew;
@@ -27,16 +26,12 @@ void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(d
         aProb = pow(M_E, (funcOpt(X) - funcOpt(Xnew)) / temp);
         if(aProb > randomNum())
             X.swap(Xnew);
-
-        //std::cout << temp << std::endl;
         temp = funcTemp(temp, tempDecr);
     }
-    for(auto& j:X)
-    {
+    for(auto& j:X){
         std::cout << j << " ";
     }
     std::cout<<std::endl;
-
 }
 
 

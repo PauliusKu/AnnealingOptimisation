@@ -147,7 +147,7 @@ void runFunc(bool calcAll){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
-        std::cout << "Laukiamas rezultatas: (0, …, 0)" << std::endl;
+        std::cout << "Laukiamas rezultatas: (0, ..., 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
     if(choice == "9" || calcAll)
@@ -175,7 +175,7 @@ void runFunc(bool calcAll){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
-        std::cout << "Laukiamas rezultatas:  (0, …, 0)" << std::endl;
+        std::cout << "Laukiamas rezultatas:  (0, ..., 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
     if(choice == "11" || calcAll)
@@ -189,7 +189,7 @@ void runFunc(bool calcAll){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
-        std::cout << "Laukiamas rezultatas:  (0, …, 0)" << std::endl;
+        std::cout << "Laukiamas rezultatas:  (0, ..., 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
     if(choice == "12" || calcAll)
@@ -217,7 +217,7 @@ void runFunc(bool calcAll){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
-        std::cout << "Laukiamas rezultatas: (0, …, 0)" << std::endl;
+        std::cout << "Laukiamas rezultatas: (0, ..., 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
 }
