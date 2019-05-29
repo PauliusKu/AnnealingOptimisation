@@ -52,13 +52,15 @@ double funcHump(std::vector<double>&X){
     return 1.0316285+4*pow(X[0],2)-2.1*pow(X[0],4)+pow(X[0],6)/3+X[0]*X[1]-4*pow(X[1],2)+4*pow(X[1],4);
 }
 double funcZakharov(std::vector<double>&X){
-    double s1 =0, s2=0;
-    for(int i=1; i!=X.size();i++)
+    double s1 = 0, s2 = 0;
+    unsigned int i = 0;
+    for(auto& j: X)
     {
-        s1 = s1 + pow(X[i-1],2);
-        s2 = s2 + 0.5*i*X[i-1];
+        s1 = s1 + pow(j, 2);
+        s2 = s2 + 0.5 * i * j;
+        i++;
     }
-    return s1+pow(s2,2)+pow(s2,4);
+    return s1 + pow(s2, 2) + pow(s2, 4);
 }
 double funcTrid(std::vector<double>&X){
     double s1 =0, s2=0;
