@@ -1,6 +1,6 @@
 //
 // Created by Paulius on 2019-05-21.
-// Functions taken from http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO_files/Page2213.htm
+// Functions taken from http://www-optima.amp.i.kyoto-u.ac.jp/member/student/hedar/Hedar_files/TestGO_files/Page364.htm
 //
 
 #include <cmath>

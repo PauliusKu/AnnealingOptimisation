@@ -28,6 +28,7 @@ void annealingMeth(double (*funcOpt)(std::vector<double>&), double (*funcRand)(d
         if(aProb > randomNum())
             X.swap(Xnew);
 
+        //std::cout << temp << std::endl;
         temp = funcTemp(temp, tempDecr);
     }
     for(auto& j:X)

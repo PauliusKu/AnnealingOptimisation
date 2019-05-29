@@ -21,11 +21,11 @@ int main() {
     std::cin>>choice;
     if(choice == "1")
     {
-        allFunc();
+        runFunc(true);
     }
     else if(choice  == "2")
     {
-        singleFunc();
+        runFunc(false);
     }
 
     return 0;

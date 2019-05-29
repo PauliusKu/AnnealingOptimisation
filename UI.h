@@ -5,7 +5,7 @@
 #ifndef ANNEALINGOPTIMISATION_UI_H
 #define ANNEALINGOPTIMISATION_UI_H
 
-void singleFunc();
+void runFunc(bool = false);
 void allFunc();
 
 #endif //ANNEALINGOPTIMISATION_UI_H

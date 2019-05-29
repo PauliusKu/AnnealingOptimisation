@@ -12,33 +12,37 @@
 #include <vector>
 
 
-void singleFunc(){
-    start:
-    std::string choice;
-    std::cout<<"Iveskite norimos funkcijos numeri:"<<std::endl
-             <<"(1) Beale function"<<std::endl
-             <<"(2) Booth function"<<std::endl
-             <<"(3) Branin function"<<std::endl
-             <<"(4) Easom function"<<std::endl
-             <<"(5) Goldstein&Price function"<<std::endl
-             <<"(6) Hump function"<<std::endl
-             <<"(7) Matyas function"<<std::endl
-             <<"(8) Zakharov function"<<std::endl
-             <<"(9) Trid function"<<std::endl
-             <<"(10) Sum Squares function"<<std::endl
-             <<"(11) Sphere function"<<std::endl
-             <<"(12) Shubert function"<<std::endl
-             <<"(13) Rastrigin function"<<std::endl;
-    std::cin>>choice;
+void runFunc(bool calcAll){
+    std::vector<double> X{1, 2};
+    double min = -2;
+    double max = 2;
+    double temperature = 1;
+    double tempDecrVal = 0.99999;
+    unsigned int itterations = 1000000;
 
-    if(choice == "1")
+    std::string choice;
+    if (!calcAll){
+        std::cout<<"Iveskite norimos funkcijos numeri:"<<std::endl
+                 <<"(1) Beale func1tion"<<std::endl
+                 <<"(2) Booth function"<<std::endl
+                 <<"(3) Branin function"<<std::endl
+                 <<"(4) Easom function"<<std::endl
+                 <<"(5) Goldstein&Price function"<<std::endl
+                 <<"(6) Hump function"<<std::endl
+                 <<"(7) Matyas function"<<std::endl
+                 <<"(8) Zakharov function"<<std::endl
+                 <<"(9) Trid function"<<std::endl
+                 <<"(10) Sum Squares function"<<std::endl
+                 <<"(11) Sphere function"<<std::endl
+                 <<"(12) Shubert function"<<std::endl
+                 <<"(13) Rastrigin function"<<std::endl;
+        std::cin>>choice;
+    }
+
+    if(choice == "1" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -4.5;
-        double max = 4.5;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -4.5;
+        max = 4.5;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -46,16 +50,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (3, 0.5)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "2")
+    if(choice == "2" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -10;
-        double max = 10;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -10;
+        max = 10;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -63,16 +64,12 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (1, 3)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "3")
+    if(choice == "3" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = 0;
-        double max = 10;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        //HAVE DIFFERENT SEARCH DOMAINS FOR VARIABLES!!!
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -80,16 +77,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (-π , 12.275), (π , 2.275), (9.42478, 2.475)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "4")
+    if(choice == "4" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -100;
-        double max = 100;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -100;
+        max = 100;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -97,16 +91,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (π, π)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "5")
+    if(choice == "5" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -2;
-        double max = 2;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -2;
+        max = 2;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -114,16 +105,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (0, 1)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "6")
+    if(choice == "6" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -5;
-        double max = 5;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -5;
+        max = 5;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -131,16 +119,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (0.0898, -0.7126), (-0.0898, 0.7126)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else  if(choice == "7")
+    if(choice == "7" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -10;
-        double max = 10;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -10;
+        max = 10;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -148,16 +133,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (0, 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "8")
+    if(choice == "8" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -5;
-        double max = 10;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -5;
+        max = 10;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -165,16 +147,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (0, …, 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "9")
+    if(choice == "9" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -pow(X.size(),2);
-        double max = pow(X.size(),2);
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -10;
+        max = 10; //???
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -182,16 +161,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas:  f(x*) = -50    for n=6,  f(x*) = -200 for n=10" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "10")
+    if(choice == "10" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -10;
-        double max = 10;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -10;
+        max = 10;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -199,16 +175,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas:  (0, …, 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "11")
+    if(choice == "11" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -5.12;
-        double max = 5.12;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -5.12;
+        max = 5.12;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -216,16 +189,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas:  (0, …, 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "12")
+    if(choice == "12" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -10;
-        double max = 10;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -10;
+        max = 10;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -233,16 +203,13 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: 18 global minima  f(x*) = -186.7309" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    else if(choice == "13")
+    if(choice == "13" || calcAll)
     {
-        std::vector<double> X{1, 2};
-        double min = -5.12;
-        double max = 5.12;
-        double temperature = 1;
-        double tempDecrVal = 0.99999;
-        unsigned int itterations = 1000000;
+        min = -5.12;
+        max = 5.12;
 
         auto start1 = std::chrono::high_resolution_clock::now();
 
@@ -250,12 +217,8 @@ void singleFunc(){
 
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start1;
+        std::cout << "Laukiamas rezultatas: (0, …, 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
-    }
-    else
-    {
-        std::cout<<"Iveskite tik SKAICIU"<<std::endl;
-        goto start;
     }
 }
 
