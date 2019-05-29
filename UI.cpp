@@ -23,7 +23,7 @@ void runFunc(bool calcAll){
     std::string choice;
     if (!calcAll){
         std::cout<<"Iveskite norimos funkcijos numeri:"<<std::endl
-                 <<"(1) Beale func1tion"<<std::endl
+                 <<"(1) Beale function"<<std::endl
                  <<"(2) Booth function"<<std::endl
                  <<"(3) Branin function"<<std::endl
                  <<"(4) Easom function"<<std::endl
@@ -44,6 +44,7 @@ void runFunc(bool calcAll){
         min = -4.5;
         max = 4.5;
 
+        std::cout << "(1) Beale function-----------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcBeale, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -58,6 +59,7 @@ void runFunc(bool calcAll){
         min = -10;
         max = 10;
 
+        std::cout << "(2) Booth function-----------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcBooth, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -71,6 +73,7 @@ void runFunc(bool calcAll){
     {
         //HAVE DIFFERENT SEARCH DOMAINS FOR VARIABLES!!!
 
+        std::cout << "(3) Branin function----------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcBranin, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -85,6 +88,7 @@ void runFunc(bool calcAll){
         min = -100;
         max = 100;
 
+        std::cout << "(4) Easom function-----------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcEasom, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -99,6 +103,7 @@ void runFunc(bool calcAll){
         min = -2;
         max = 2;
 
+        std::cout << "(5) Goldstein&Price function-------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcGoldsteinAndPrice, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -113,6 +118,7 @@ void runFunc(bool calcAll){
         min = -5;
         max = 5;
 
+        std::cout << "(6) Hump function------------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcHump, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -127,6 +133,7 @@ void runFunc(bool calcAll){
         min = -10;
         max = 10;
 
+        std::cout << "(7) Matyas function----------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcMatyas, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -141,6 +148,7 @@ void runFunc(bool calcAll){
         min = -5;
         max = 10;
 
+        std::cout << "(8) Zakharov function--------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcZakharov, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -155,6 +163,7 @@ void runFunc(bool calcAll){
         min = -10;
         max = 10; //???
 
+        std::cout << "(9) Trid function------------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcTrid, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -169,6 +178,7 @@ void runFunc(bool calcAll){
         min = -10;
         max = 10;
 
+        std::cout << "(10) Sum Squares function----------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcSumSquares, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -183,6 +193,7 @@ void runFunc(bool calcAll){
         min = -5.12;
         max = 5.12;
 
+        std::cout << "(11) Sphere function---------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcSphere, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -197,6 +208,7 @@ void runFunc(bool calcAll){
         min = -10;
         max = 10;
 
+        std::cout << "(12) Shubert function--------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcShubert, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
@@ -211,6 +223,7 @@ void runFunc(bool calcAll){
         min = -5.12;
         max = 5.12;
 
+        std::cout << "(13) Rastrigin function------------------------------------------------------------" << std::endl;
         auto start1 = std::chrono::high_resolution_clock::now();
 
         annealingMeth(funcRastrigin, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
