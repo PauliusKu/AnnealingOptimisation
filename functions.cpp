@@ -63,40 +63,20 @@ double funcZakharov(std::vector<double>&X){
     }
     return s1 + pow(s2, 2) + pow(s2, 4);
 }
-double funcTrid(std::vector<double>&X){
-    double s1 =0, s2=0;
-    for(int i=1; i!=X.size();i++)
-    {
-        s1 = s1+pow(X[i-1]-1,2);
-    }
-    for(int i=2; i!=X.size();i++)
-    {
-        s2 = s2+X[i-1]*X[i-2];
-    }
-    return s1-s2;
-}
+
 double funcSumSquares(std::vector<double>&X){
     double s = 0;
-    for(int i=1; i!=X.size(); i++)
+    for(auto i=0; i!=X.size(); i++)
     {
-        s = s*i*pow(X[i-1],2);
+        s = s+(i+1)*pow(X[i],2);
     }
     return s;
 }
 double funcSphere(std::vector<double>&X){
     double s = 0;
-    for(int i=1; i!=X.size();i++)
+    for(int i=0; i!=X.size();i++)
     {
-        s = s+pow(X[i-1],2);
+        s = s+pow(X[i],2);
     }
     return s;
-}
-double funcShubert(std::vector<double>&X){
-    double s1 = 0, s2 = 0;
-    for(int i=1; i<5;i++)
-    {
-        s1 = s1+i*cos((i+1)*X[0]+i);
-        s2 = s2+i*cos((i+1)*X[1]+i);
-    }
-    return s1*s2;
 }

@@ -31,11 +31,9 @@ void runFunc(bool calcAll){
                  <<"(6) Hump function"<<std::endl
                  <<"(7) Matyas function"<<std::endl
                  <<"(8) Zakharov function"<<std::endl
-                 <<"(9) Trid function"<<std::endl
-                 <<"(10) Sum Squares function"<<std::endl
-                 <<"(11) Sphere function"<<std::endl
-                 <<"(12) Shubert function"<<std::endl
-                 <<"(13) Rastrigin function"<<std::endl;
+                 <<"(9) Sum Squares function"<<std::endl
+                 <<"(10) Sphere function"<<std::endl
+                 <<"(11) Rastrigin function"<<std::endl;
         std::cin>>choice;
     }
 
@@ -150,21 +148,8 @@ void runFunc(bool calcAll){
         std::cout << "Laukiamas rezultatas: (0, ..., 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
+
     if(choice == "9" || calcAll)
-    {
-        min = -10;
-        max = 10; //???
-
-        auto start1 = std::chrono::high_resolution_clock::now();
-
-        annealingMeth(funcTrid, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
-
-        auto finish1 = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double> elapsed1 = finish1 - start1;
-        std::cout << "Laukiamas rezultatas:  f(x*) = -50    for n=6,  f(x*) = -200 for n=10" << std::endl;
-        std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
-    }
-    if(choice == "10" || calcAll)
     {
         min = -10;
         max = 10;
@@ -178,7 +163,7 @@ void runFunc(bool calcAll){
         std::cout << "Laukiamas rezultatas:  (0, ..., 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    if(choice == "11" || calcAll)
+    if(choice == "10" || calcAll)
     {
         min = -5.12;
         max = 5.12;
@@ -192,21 +177,7 @@ void runFunc(bool calcAll){
         std::cout << "Laukiamas rezultatas:  (0, ..., 0)" << std::endl;
         std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
     }
-    if(choice == "12" || calcAll)
-    {
-        min = -10;
-        max = 10;
-
-        auto start1 = std::chrono::high_resolution_clock::now();
-
-        annealingMeth(funcShubert, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
-
-        auto finish1 = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double> elapsed1 = finish1 - start1;
-        std::cout << "Laukiamas rezultatas: 18 global minima  f(x*) = -186.7309" << std::endl;
-        std::cout << "Programos vykdymo laikas: " << elapsed1.count() << " s\n";
-    }
-    if(choice == "13" || calcAll)
+    if(choice == "11" || calcAll)
     {
         min = -5.12;
         max = 5.12;
@@ -301,15 +272,6 @@ void allFunc()
         std::cout<<"Zakharov function: ";
         annealingMeth(funcZakharov, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
 
-        //funcTrid
-       min = -pow(X.size(),2);
-       max = pow(X.size(),2);
-       temperature = 1;
-       tempDecrVal = 0.99999;
-       itterations = 1000000;
-        std::cout<<"Trid function: ";
-        annealingMeth(funcTrid, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
-
         //funcSumSquares
         min = -10;
         max = 10;
@@ -327,15 +289,6 @@ void allFunc()
         itterations = 1000000;
         std::cout<<"Sphere function: ";
         annealingMeth(funcSphere, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
-
-        //funcShubert
-        min = -10;
-        max = 10;
-        temperature = 1;
-        tempDecrVal = 0.99999;
-        itterations = 1000000;
-        std::cout<<"Shubert function: ";
-        annealingMeth(funcShubert, randomNum, getNextMltDescT, temperature, itterations, X, min, max, tempDecrVal);
 
         //funcRastrigin
         min = -5.12;
