@@ -6,6 +6,5 @@
 #define ANNEALINGOPTIMISATION_UI_H
 
 void runFunc(bool = false);
-void allFunc();
 
 #endif //ANNEALINGOPTIMISATION_UI_H
