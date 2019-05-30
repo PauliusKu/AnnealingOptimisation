@@ -13,11 +13,11 @@
 
 
 void runFunc(bool calcAll){
-    std::vector<double> X{1, 2};
+    std::vector<double> X{-2, -2};
     double min = -2;
     double max = 2;
     double temperature = 1;
-    double tempDecrVal = 0.99999;
+    double tempDecrVal = 0.9999;
     unsigned int itterations = 1000000;
 
     std::string choice;
