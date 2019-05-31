@@ -2,10 +2,6 @@
 
 # Atkaitinimo modeliavimo algoritmas
 
-Šiame darbe analizuojamas Atkaitinimo (angl. annealing) modeliavimo metodas. Sukurta šį
-metodą įgyvendinantį C++ programa. Pilną programinį kodą galima rasti
-https://github.com/PauliusKu/AnnealingOptimisation
-
 ## Metodo pristatymas
 
 Atkaitinimo modeliavimo (AM) metodo ištakos slypi statistinėje mechanikoje, tiksliau, energetinių
